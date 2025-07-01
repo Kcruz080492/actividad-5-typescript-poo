@@ -8,6 +8,72 @@
   </head>
   <body>
     <div id="app"></div>
-    <script type="module" src="/src/main.ts"></script>
+    <div id="app">
+    
+      <p>Ejercicio 1</p>
+  <h1>Vista de la Cabecera</h1>
+  <div id="resultado"></div>
+     
+  <p>Ejercicio 2</p>
+   <h1>Calculadora en TypeScript</h1>
+  <form id="formulario">
+    <input type="number" id="numero1" placeholder="Número 1" required />
+    <input type="number" id="numero2" placeholder="Número 2" />
+
+    <select id="operacion" required>
+      <option value="sumar">Sumar</option>
+      <option value="restar">Restar</option>
+      <option value="multiplicar">Multiplicar</option>
+      <option value="dividir">Dividir</option>
+      <option value="potencia">Potencia</option>
+      <option value="factorial">Factorial (usa solo el número 1)</option>
+    </select>
+
+    <button type="submit">Calcular</button>
+  </form>
+
+  <div id="resultado2" class="resultado2"></div>
+</div>
+
+  <p>Ejercicio 3</p>
+<h1>Registro de Canción</h1>
+  <form id="form-cancion">
+    <input type="text" id="titulo" placeholder="Título" required />
+    <input type="text" id="genero" placeholder="Género" required />
+    <input type="text" id="autor" placeholder="Autor" required />
+    <button type="submit">Mostrar Canción</button>
+  </form>
+
+  <div id="resultado3" class="resultado"></div>
+
+  <p>Ejercicio 4</p>
+  <h1>Gestión de Cuenta Bancaria 💳</h1>
+  <form id="form-cuenta">
+    <input type="text" id="nombre" placeholder="Nombre" required />
+    <input type="number" id="cantidad" placeholder="Cantidad a depositar" required />
+    <input type="text" id="tipoCuenta" placeholder="Tipo de Cuenta" required />
+    <input type="text" id="numeroCuenta" placeholder="Número de Cuenta" required />
+   </form>
+   <div class="botones-cuenta">
+    <button type="submit">Registrar Cuenta</button>
+    <button id="btn-retirar">Retirar Dinero</button>
+  </div>
+
+  <div id="resultado4" class="resultado"></div>
+
+  <p>Ejercicio 5</p>
+  <h1>Registro de Empleado 👨‍💼</h1>
+  <form id="form-empleado">
+    <input type="text" id="nombreEmpleado" placeholder="Nombre" required />
+    <input type="text" id="apellidoEmpleado" placeholder="Apellido" required />
+    <input type="text" id="direccion" placeholder="Dirección" required />
+    <input type="text" id="telefono" placeholder="Teléfono" required />
+    <input type="number" id="edad" placeholder="Edad" required />
+    <input type="number" id="sueldo" placeholder="Sueldo" required />
+    <button type="submit">Registrar Empleado</button>
+  </form>
+
+  <div id="resultado5" class="resultado"></div>
+  <script type="module" src="/src/main.ts"></script>
   </body>
 </html>

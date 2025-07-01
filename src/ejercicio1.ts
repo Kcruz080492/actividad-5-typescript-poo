@@ -1,4 +1,3 @@
-// Ejercicio 1: Clase CabeceraPagina
 class CabeceraPagina {
   private titulo: string = "";
   private color: string = "";
@@ -12,24 +11,37 @@ class CabeceraPagina {
   }
 
   definirAlineacion(alineacion: string): void {
-    const opciones = ["izquierda", "centrado", "derecha"];
-    if (opciones.includes(alineacion.toLowerCase())) {
-      this.alineacion = alineacion;
+    const opciones: { [key: string]: string } = {
+      izquierda: "left",
+      centrado: "center",
+      derecha: "right"
+    };
+
+    const valor = opciones[alineacion.toLowerCase()];
+    if (valor) {
+      this.alineacion = valor;
     } else {
-      console.log("Alineación inválida");
+      console.log("Alineación no válida.");
     }
   }
 
+  // 👇 AQUÍ va tu método para mostrar el contenido en pantalla
   mostrarCabecera(): void {
-    console.log("Título:", this.titulo);
-    console.log("Color:", this.color);
-    console.log("Fuente:", this.fuente);
-    console.log("Alineación:", this.alineacion);
+    const contenedor = document.getElementById("resultado");
+    if (contenedor) {
+      contenedor.innerHTML = `
+        <h2 style="
+          color: ${this.color};
+          font-family: ${this.fuente}, sans-serif;
+          text-align: ${this.alineacion};
+        ">
+          ${this.titulo}
+        </h2>
+      `;
+    }
   }
 }
-
-// Prueba
 const cabecera = new CabeceraPagina();
-cabecera.asignarEstilos("Mi página", "rojo", "Arial");
+cabecera.asignarEstilos("Mi página", "red", "Arial");
 cabecera.definirAlineacion("centrado");
 cabecera.mostrarCabecera();
